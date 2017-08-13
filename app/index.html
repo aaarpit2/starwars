@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="starwarApp" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Star Wars</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Plugin level CSS-->    
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+  <!-- Application level CSS-->    
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div ng-view></div>
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->        
+
+  <!-- Plugin/third party level js files-->    
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  
+  <!-- Applicaiton config file-->    
+  <script src="scripts/app.js"></script>
+
+  <!-- Applicaiton common modules/services file-->    
+  <script src="scripts/common/common.module.js"></script>
+  <script src="scripts/common/constants.js"></script>
+  <script src="scripts/common/directives/searchPlanet.directive.js"></script>
+  <script src="scripts/common/services/authentication.service.module.js"></script>
+  <script src="scripts/common/services/authentication.service.js"></script>
+  <script src="scripts/common/services/starwars.service.module.js"></script>
+  <script src="scripts/common/services/starwars.service.js"></script>
+  
+  <!-- Applicaiton authenticaltion modules/services/controllers file-->    
+
+  <script src="scripts/modules/login/login.module.js"></script>
+  <script src="scripts/modules/login/config.route.js"></script>
+  <script src="scripts/modules/login/login.controller.js"></script>
+
+  <!-- Applicaiton searching modules/services/controllers file-->    
+  <script src="scripts/modules/search/search.module.js"></script>
+  <script src="scripts/modules/search/config.route.js"></script>
+  <script src="scripts/modules/search/search.controller.js"></script>
+</body>
+</html>
