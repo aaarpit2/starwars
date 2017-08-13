@@ -9,15 +9,20 @@
 
         //get list of planets based on the input from user.
         service.searchPlanet = function(planetname,pageNumber) {
+        	var paramObject = {};
         	if(!pageNumber){
-        		pageNumber = 1;
+        		paramObject.search = planetname;
+        	}
+        	else{
+        		paramObject.search = planetname;
+        		paramObject.page = pageNumber;
         	}
 	        var df = $q.defer();
 	        $http({
 				method : "GET",
 				url : Constants.baseUrl+"/planets",
 	            headers: {'Content-Type':'application/json'},
-	            params: {search: planetname,page: pageNumber}
+	            params: paramObject
 	        })
 	        .then(
 	        function(response){
