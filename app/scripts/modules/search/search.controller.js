@@ -21,7 +21,6 @@
 			            	if(response.data.count != 0){
                                 if(response.data.next == null){
                                     $scope.planets = response.data.results;
-                                    console.log($scope.planets);
                                 }
                                 else{
                                     //For ajax call chaining in case result contain multiple pages.
