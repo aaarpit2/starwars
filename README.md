@@ -1,4 +1,4 @@
-# starwars
+# starwars(Framework used : AngularJS 1.6)
 How to start the project
 1.  Before starting the project please verify that machine should have these dependencies :
 	1.1 NodeJS (NPM) - https://nodejs.org/en/download/
