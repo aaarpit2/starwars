@@ -3,35 +3,39 @@
   </h1>
 </div>
 <div class="container">
-      <form name="myForm">
-        <div class="login-container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="usr" ng-model="user.username" required class="form-control" placeholder="Enter Full Name">
-                <div ng-show="myForm.usr.$error.required &amp;&amp; myForm.usr.$touched" class="error">Required!</div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="pass" ng-model="user.password" required class="form-control" placeholder="Password">
-                <div ng-show="myForm.pass.$error.required &amp;&amp; myForm.pass.$touched" class="error">Required!</div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="form-group">
-                <button ng-click="authenticate()" ng-disabled="myForm.$invalid || responsePending" class="btn btn-success pull-right">Login</button>
-                <div class="clearfix"></div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div ng-show="errorObject.showError" class="alert alert-danger">{{errorObject.showErrorMessage}}</div>
-            </div>
+  <form name="myForm">
+    <div class="login-container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" name="usr" ng-model="user.username" required class="form-control" placeholder="Enter Full Name">
+            <div ng-show="myForm.usr.$error.required &amp;&amp; myForm.usr.$touched" class="error">Required!</div>
           </div>
         </div>
-      </form>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="pass" ng-model="user.password" required class="form-control" placeholder="Password">
+            <div ng-show="myForm.pass.$error.required &amp;&amp; myForm.pass.$touched" class="error">Required!</div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <button ng-click="authenticate()" ng-disabled="myForm.$invalid || responsePending" class="btn btn-success pull-right">Login</button>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div ng-show="errorObject.showError" class="alert alert-danger">{{errorObject.showErrorMessage}}</div>
+        </div>
+      </div>
     </div>
+  </form>
+</div>
+
+<div class="overlay" ng-show="responsePending">
+  <div class="loading-img"></div>
+</div>
