@@ -10,3 +10,39 @@ How to start the project
 3.  Open the terminal and redirect to the folder when project has been cloned.
 4.  Now give this command - npm start, first time it will take little time as it will install all require dependencies from internet.
 5.  After all installation it will start the application on port 8000, so just go to the browser and open this url : http://localhost:8000, it will open the application and redirect to the default login page.
+
+
+https://scotch.io/tutorials/testing-angularjs-with-jasmine-and-karma-part-1
+
+Karma Setup
+
+npm install karma karma-jasmine jasmine-core karma-chrome-launcher --save-dev
+
+
+npm install -g karma-cli
+
+npm install angular angular-ui-router angular-mocks --save-dev
+
+karma init
+
+Example : 
+module.exports = function(config) {
+  config.set({
+    basePath: '',
+    frameworks: ['jasmine'],
+    files: [
+    ],
+    exclude: [
+    ],
+    preprocessors: {
+    },
+    reporters: ['progress'],
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    browsers: ['Chrome'],
+    singleRun: false,
+    concurrency: Infinity
+  })
+}
